@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "nav top-content top-content top-content top-content top-content"
+    "nav middle-content middle-content middle-content middle-content middle-content"
+    "nav lower-content lower-content lower-content lower-content lower-content"
+    "footer footer footer footer footer footer";
+  gap: 10px;
+  text-align: center;
+  border: 1px solid black;
+  height: 100vh;
+}
+
+.header__section {
+  grid-area: header;
+  background-color: #f11000;
+}
+
+.nav__section {
+  grid-area: nav;
+  background-color: #ff7300;
+}
+
+.top__content {
+  grid-area: top-content;
+  display: grid;
+  grid-template-areas: "upper-left upper-center upper-center upper-right upper-right";
+  gap: 10px;
+}
+
+.top__content .upper__left {
+  grid-area: upper-left;
+  background-color: #07c767;
+}
+
+.top__content .upper__center {
+  grid-area: upper-center;
+  background-color: #752bf5;
+}
+
+.top__content .upper__right {
+  grid-area: upper-right;
+  background-color: #374bb9;
+}
+
+.middle__content {
+  grid-area: middle-content;
+  background-color: #03cafc;
+}
+
+.lower__content {
+  grid-area: lower-content;
+  background-color: #017b8b;
+}
+
+.footer__section {
+  grid-area: footer;
+  background-color: #014d18;
+}
